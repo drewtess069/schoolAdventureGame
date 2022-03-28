@@ -97,10 +97,13 @@
             // 
             this.mainImage.BackgroundImage = global::schoolAdventureGame.Properties.Resources.page_0;
             this.mainImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mainImage.ErrorImage = null;
+            this.mainImage.Image = global::schoolAdventureGame.Properties.Resources.page_0;
             this.mainImage.ImageLocation = "middleCenter";
             this.mainImage.Location = new System.Drawing.Point(12, 88);
             this.mainImage.Name = "mainImage";
             this.mainImage.Size = new System.Drawing.Size(768, 262);
+            this.mainImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.mainImage.TabIndex = 4;
             this.mainImage.TabStop = false;
             // 
