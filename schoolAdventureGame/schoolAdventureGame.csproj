@@ -140,5 +140,65 @@
   <ItemGroup>
     <None Include="Resources\bully-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\embarassment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slipper.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\court.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\congrats.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out of breath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smoke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ronald.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kidnap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

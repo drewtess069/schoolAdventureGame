@@ -345,7 +345,7 @@ namespace schoolAdventureGame
             }
             else if (page == 99)
             {
-                page = 0;
+                this.Close();
             }
 
             displayPage();
@@ -357,9 +357,28 @@ namespace schoolAdventureGame
             {
                 case 0:
                     mainImage.Image = Properties.Resources.page_0;
+
+                    button3.Visible = true;
+                    button3.Enabled = true;
+
+                    button2.Enabled = false;
+                    button1.Enabled = false;
+
+                    button2.Visible = false;
+                    button1.Visible = false;
+
+                    button3.Text = "Begin";
+
+                    titleLabel.Visible = true;
+                    outputLabel.Visible = false;
+
+                    titleLabel.Text = "School Simulator";
                     break;
 
                 case 1:
+
+                    outputLabel.Visible = true;
+
                     titleLabel.Text = "";
                     titleLabel.Visible = false;
 
@@ -377,6 +396,9 @@ namespace schoolAdventureGame
                     image2.BackgroundImage = Properties.Resources.page1b;
 
                     outputLabel.Text = "It's your first day of school. \n\nWhat will you wear?";
+
+                    button1.Text = "T-shirt";
+                    button2.Text = "Sweater";
                     break;
 
                 case 2:
@@ -384,6 +406,9 @@ namespace schoolAdventureGame
 
                     image1.BackgroundImage = Properties.Resources.page2;
                     image2.BackgroundImage = Properties.Resources.page2b;
+
+                    button1.Text = "Jeans";
+                    button2.Text = "Joggers";
                     break;
 
                 case 3:
@@ -511,16 +536,27 @@ namespace schoolAdventureGame
                 case 16:
                     outputLabel.Text = "You get your head smashed in";
 
+                    mainImage.BackgroundImage = Properties.Resources.bully;
+
                     continueButton();
                     break;
                 case 17:
                     outputLabel.Text = "You get your head smashed in";
+
+                    mainImage.BackgroundImage = Properties.Resources.bully;
 
                     continueButton();
 
                     break;
                 case 18:
                     outputLabel.Text = "Your new friend Ben steps in and begins to fight the bully \n\nHelp him?";
+
+                    mainImage.Visible = false;
+                    image1.Visible = true;
+                    image2.Visible = true;
+
+                    image1.BackgroundImage = Properties.Resources.ben;
+                    image2.BackgroundImage = Properties.Resources.bully;
 
                     button3.Visible = true;
                     button2.Enabled = true;
@@ -535,17 +571,27 @@ namespace schoolAdventureGame
                 case 19:
                     outputLabel.Text = "With Ben's help, you won the fight";
 
+                    mainImage.Visible = true;
+                    image1.Visible = false;
+                    image2.Visible = false;
+
+                    mainImage.BackgroundImage = Properties.Resources.ben;
+
                     continueButton();
 
                     break;
                 case 20:
                     outputLabel.Text = "You are a loser, you let your friend fight YOUR fight without offering any help. Game over.";
 
+                    mainImage.BackgroundImage = Properties.Resources.loser;
+
                     continueButton();
 
                     break;
                 case 21:
                     outputLabel.Text = "While walking the halls, you make eye contact with one of the 'popular girls'\n\nWill you go talk to them?";
+
+                    mainImage.BackgroundImage = Properties.Resources.girl;
 
                     button3.Visible = false;
                     button3.Enabled = false;
@@ -559,12 +605,16 @@ namespace schoolAdventureGame
                     button1.Text = "Yes";
                     button2.Text = "No";
                     break;
+
                 case 22:
                     outputLabel.Text = "You go to class";
+
+                    mainImage.BackgroundImage = Properties.Resources._class;
 
                     continueButton();
 
                     break;
+
                 case 23:
 
                     button2.Enabled = false;
@@ -572,6 +622,8 @@ namespace schoolAdventureGame
 
                     button2.Visible = false;
                     button1.Visible = false;
+
+                    mainImage.BackgroundImage = Properties.Resources.girl;
 
                     outputLabel.Text = "You ask one of them for their number and they say yes!";
                     Thread.Sleep(3000);
@@ -587,6 +639,8 @@ namespace schoolAdventureGame
                 case 24:
                     outputLabel.Text = "They laugh at you and make fun of your outfit";
 
+                    mainImage.BackgroundImage = Properties.Resources.embarassment;
+
                     continueButton();
                     break;
                 case 25:
@@ -598,6 +652,8 @@ namespace schoolAdventureGame
                     outputLabel.Text = "Upon arriving to class, you find out you have a test \n\nWrite the test or skip class";
 
                     randomChance = randGen.Next(1, 11);
+
+                    mainImage.BackgroundImage = Properties.Resources.test;
 
                     button3.Visible = false;
                     button3.Enabled = false;
@@ -614,15 +670,21 @@ namespace schoolAdventureGame
                 case 29:
                     outputLabel.Text = "You get your test back shortly after handing it in \n\nCongratulations, you passed! Well done!";
 
+                    mainImage.BackgroundImage = Properties.Resources.pass_test;
+
                     continueButton();
                     break;
                 case 30:
                     outputLabel.Text = "You get your test back shortly after handing it in \n\nYou failed :( Your mom is gonna kill you!";
 
+                    mainImage.BackgroundImage = Properties.Resources.fail_test;
+
                     continueButton();
                     break;
                 case 31:
                     outputLabel.Text = "A teacher hears your plead for help and takes the bully to the office \n\nContinue walking the halls or go to class?";
+
+                    mainImage.BackgroundImage = Properties.Resources.hall;
 
                     button3.Enabled = false;
                     button3.Visible = false;
@@ -633,21 +695,31 @@ namespace schoolAdventureGame
                 case 32:
                     outputLabel.Text = "One of the bully's friends see you and knocks you out";
 
+                    mainImage.BackgroundImage = Properties.Resources.bully;
+
                     continueButton();
                     break;
                 case 33:
                     outputLabel.Text = "You arrive to class and are greeted by the principal, he asks you to come to the office. \n\nGo with him?";
 
+                    mainImage.BackgroundImage = Properties.Resources._class;
+
                     button1.Text = "Yes";
                     button2.Text = "Yes";
                     break;
+
                 case 34:
                     outputLabel.Text = "He calls your mom and as soon as you get home she beats with you with a slipper";
 
+                    mainImage.BackgroundImage = Properties.Resources.slipper;
+
                     continueButton();
                     break;
+
                 case 35:
                     outputLabel.Text = "In the office, the principal tells you you will be receiving a suspension for fighting \n\nGo home?";
+
+                    mainImage.BackgroundImage = Properties.Resources.office;
 
                     button1.Text = "No";
                     button2.Text = "Yes";
@@ -660,6 +732,8 @@ namespace schoolAdventureGame
                 case 37:
                     outputLabel.Text = "When you get home your mother is waiting for you, she asks you what happened \n\nExplain what happened or right hook her in the jaw?";
 
+                    mainImage.BackgroundImage = Properties.Resources.slipper;
+
                     button1.Text = "Explain";
                     button2.Text = "Right Hook";
 
@@ -667,20 +741,28 @@ namespace schoolAdventureGame
                 case 38:
                     outputLabel.Text = "Your mom called the cops and you were sentenced to one year in prison";
 
+                    mainImage.BackgroundImage = Properties.Resources.court;
+
                     continueButton();
                     break;
                 case 39:
                     outputLabel.Text = "Your mom understands that it wasn't your fault and let's you go";
+
+                    mainImage.BackgroundImage = Properties.Resources.mom;
 
                     continueButton();
                     break;
                 case 40:
                     outputLabel.Text = "Congratulations, you made it through the day without getting yourself killed!";
 
+                    mainImage.BackgroundImage = Properties.Resources.congrats;
+
                     continueButton();
                     break;
                 case 41:
                     outputLabel.Text = "Your teacher chases you but you're able to escape \n\nDo you want to go to your house, the park or out for lunch";
+
+                    mainImage.BackgroundImage = Properties.Resources.out_of_breath;
 
                     button3.Visible = true;
                     button3.Enabled = true;
@@ -692,10 +774,14 @@ namespace schoolAdventureGame
                 case 42:
                     outputLabel.Text = "You are able to sneak past your mom into your room. You lock your door and stay in there for the rest of the night";
 
+                    mainImage.BackgroundImage = Properties.Resources.room;
+
                     continueButton();
                     break;
                 case 43:
                     outputLabel.Text = "There is a sketchy group of people at the park \n\nGo there anyway?";
+
+                    mainImage.BackgroundImage = Properties.Resources.smoke;
 
                     button1.Text = "Yes";
                     button2.Text = "No";
@@ -703,27 +789,48 @@ namespace schoolAdventureGame
                 case 44:
                     outputLabel.Text = "You eat too much at mcdonalds and you turn into a clown.Just like ronald mcdonald";
 
+                    mainImage.BackgroundImage = Properties.Resources.ronald;
+
                     continueButton();
                     break;
                 case 45:
                     outputLabel.Text = "You get kidnapped";
+
+                    mainImage.BackgroundImage = Properties.Resources.kidnap;
 
                     continueButton();
                     break;
                 case 46:
                     outputLabel.Text = "As you leave the park you are fatally struck by a car";
 
+                    mainImage.BackgroundImage = Properties.Resources.car;
+
                     continueButton();
                     break;
                 case 47:
                     outputLabel.Text = "Congratulations! You survived but your mom and teacher both hate you!";
 
+                    mainImage.BackgroundImage = Properties.Resources.congrats;
+
                     continueButton();
                     break;
+                case 99:
+                    outputLabel.Text = "Play Again?";
 
+                    mainImage.BackgroundImage = null;
 
+                    button3.Enabled = false;
+                    button3.Visible = false;
 
+                    button2.Enabled = true;
+                    button2.Visible = true;
 
+                    button1.Enabled = true;
+                    button1.Visible = true;
+
+                    button1.Text = "Yes";
+                    button2.Text = "No";
+                    break;
             }
         }
         void continueButton()
