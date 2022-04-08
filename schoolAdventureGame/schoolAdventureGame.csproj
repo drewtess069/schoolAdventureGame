@@ -200,5 +200,20 @@
   <ItemGroup>
     <None Include="Resources\car.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metal-hit-sound-effect_AfFvjE8u.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\What are you doing in my swamp HD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\what-are-you-doing-in-my-swamp-hd_uTVgSZXe.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\what-are-you-doing-in-my-swamp-hd_sBRLO4f3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beating-up-sound-effect-wesleytrv_gMjBynY5.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

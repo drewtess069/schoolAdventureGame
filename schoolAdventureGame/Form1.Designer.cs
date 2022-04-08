@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.titleLabel = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -98,7 +99,6 @@
             this.mainImage.BackgroundImage = global::schoolAdventureGame.Properties.Resources.page_0;
             this.mainImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.mainImage.ErrorImage = null;
-            this.mainImage.Image = global::schoolAdventureGame.Properties.Resources.page_0;
             this.mainImage.ImageLocation = "middleCenter";
             this.mainImage.Location = new System.Drawing.Point(12, 88);
             this.mainImage.Name = "mainImage";
@@ -141,6 +141,7 @@
             this.Controls.Add(this.image2);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.outputLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = " School Simulator";
             ((System.ComponentModel.ISupportInitialize)(this.mainImage)).EndInit();

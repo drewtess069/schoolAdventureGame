@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace schoolAdventureGame
 {
     public partial class Form1 : Form
     {
-
+        //Set up global variables that are stored and used later on
         string ben;
         string shirt;
         string pants;
+
+        //Set up page variable to move through screen easily
         int page = 0;
+
+
+        //Set up a random number generator for random encounters within the game
         int randomChance;
         Random randGen = new Random();
         public Form1()
@@ -26,6 +32,8 @@ namespace schoolAdventureGame
         }
 
         private void button3_Click(object sender, EventArgs e)
+
+            //Set up all of the pages for the middle button on the screen which is used as a continue button and when a decision has three choices
         {
             if (page == 0)
             {
@@ -155,9 +163,12 @@ namespace schoolAdventureGame
         }
 
         private void button1_Click(object sender, EventArgs e)
+
+            //Set up pages for the button on the left of the screen
         {
             if (page == 1)
             {
+                //Store player outfit, this may change the pathway of the game
                 shirt = "tshirt";
                 page = 2;
             }
@@ -194,6 +205,7 @@ namespace schoolAdventureGame
             {
                 page = 14;
             }
+            //First random encounter, 50/50 chance
             else if (page == 14 && randomChance > 5)
             {
                 page = 15;
@@ -202,6 +214,8 @@ namespace schoolAdventureGame
             {
                 page = 21;
             }
+
+            //Check player outfit, different pathways depending on what is worn
             else if ((page == 21) && (shirt == "tshirt") && (pants == "jogging pants"))
             {
                 page = 23;
@@ -250,6 +264,7 @@ namespace schoolAdventureGame
             {
                 page = 45;
             }
+            //If player wants to play again, all variables are reset
             else if (page == 99)
             {
                 page = 0;
@@ -263,9 +278,12 @@ namespace schoolAdventureGame
         }
 
         private void button2_Click(object sender, EventArgs e)
+
+        //Set up pages for the button on the left of the screen
         {
             if (page == 1)
             {
+                //Store player outfit, this may change the pathway of the game
                 shirt = "tshirt";
                 page = 2;
             }
@@ -323,6 +341,7 @@ namespace schoolAdventureGame
             {
                 page = 22;
             }
+            //Check variable, if ben is your friend there is a different path than if he isn't
             else if (page == 15 && ben == "yes")
             {
                 page = 18;
@@ -351,6 +370,7 @@ namespace schoolAdventureGame
             {
                 page = 38;
             }
+            //If player loses and does not want to play again, close game
             else if (page == 99)
             {
                 this.Close();
@@ -359,12 +379,12 @@ namespace schoolAdventureGame
         }
 
         void displayPage()
+        //Set up the displays for each page
         {
-            this.Text = $"{page}";
             switch (page)
             {
                 case 0:
-                    mainImage.Image = Properties.Resources.page_0;
+                    mainImage.BackgroundImage = Properties.Resources.page_0;
 
                     button3.Visible = true;
                     button3.Enabled = true;
@@ -447,17 +467,12 @@ namespace schoolAdventureGame
                     button2.Text = "No";
                     break;
                 case 6:
+                    SoundPlayer metalPlayer = new SoundPlayer(Properties.Resources.metal);
+                    metalPlayer.Play();
                     outputLabel.Text = "The bus hits a bump and you fly out of your seat \n\nYou hit your head on the roof and die.";
-
                     mainImage.BackgroundImage = Properties.Resources.death1;
-                    button3.Enabled = true;
-                    button3.Visible = true;
-                    button1.Enabled = false;
-                    button2.Enabled = false;
-                    button1.Visible = false;
-                    button2.Visible = false;
 
-                    button3.Text = "Continue";
+                    continueButton();
                     break;
                 case 7:
                     outputLabel.Text = "You're a little early. \n\nTake the scenic route or direct route?";
@@ -479,6 +494,8 @@ namespace schoolAdventureGame
                     button2.Text = "Yes";
                     break;
                 case 9:
+                    SoundPlayer shrekPlayer = new SoundPlayer(Properties.Resources.shrek);
+                    shrekPlayer.Play();
                     outputLabel.Text = "You get caught running through someone's backyard \n\nRun away or try to talk to them?";
 
                     mainImage.BackgroundImage = Properties.Resources.angry;
@@ -500,8 +517,6 @@ namespace schoolAdventureGame
                     mainImage.BackgroundImage = Properties.Resources.yelling;
 
                     continueButton(); 
-
-                    button3.Text = "Continue";
                     break;
                 case 12:
                     outputLabel.Text = "You make it to school late but safe";
@@ -511,11 +526,13 @@ namespace schoolAdventureGame
                     continueButton();
                     break;
                 case 13:
+                    SoundPlayer fightPlayer = new SoundPlayer(Properties.Resources.fight);
+                    fightPlayer.Play();
                     outputLabel.Text = "You run into a group of high-schoolers. When they see you they gang up and beat you up. You become seriously injured.";
 
                     mainImage.BackgroundImage = Properties.Resources.alleyPeople;
 
-                    button3.Text = "Continue";
+                    continueButton();
                     break;
                 case 14:
                     outputLabel.Text = "You get to school early \n\nGo to class or walk the halls?";
@@ -821,6 +838,7 @@ namespace schoolAdventureGame
             }
         }
         void continueButton()
+        //This function is called upon everytime only one button is needed, it disables the unnecessary buttons and enables the necessary one.
         {
             button3.Visible = true;
             button3.Enabled = true;
@@ -833,7 +851,6 @@ namespace schoolAdventureGame
 
             button3.Text = "Continue";
         }
-
     }
 }
 

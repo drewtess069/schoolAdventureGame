@@ -201,6 +201,15 @@ namespace schoolAdventureGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream fight {
+            get {
+                return ResourceManager.GetStream("fight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap girl {
@@ -247,6 +256,15 @@ namespace schoolAdventureGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("loser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream metal {
+            get {
+                return ResourceManager.GetStream("metal", resourceCulture);
             }
         }
         
@@ -357,6 +375,15 @@ namespace schoolAdventureGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("room", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shrek {
+            get {
+                return ResourceManager.GetStream("shrek", resourceCulture);
             }
         }
         
